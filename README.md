@@ -7,7 +7,7 @@ Inputs are for five NaCl-type ionic crystals LiF, MgO, NaCl, KF, and CaO.
 We use nine-layer slabs for GGA and QSGW calculations.
 
 
-###Dielectric constant from the results of ESM calculation
+##Dielectric constant from the results of ESM calculation
 
 Here we explain how to calculate dielectric constants in slab model.
 
@@ -43,7 +43,7 @@ The dielectric constant 1.94 is the same results for the slab calculation in QSG
 Please check ``fit.eps`` and if the two fitting results are rational (compare with Fig. 1 of the main text).
 
 
-###How to perform the slab calculation for obtaining charge_pot.dat
+#How to perform the slab calculation for obtaining charge_pot.dat
 
 In the following, we explain how to obtain the file of ``charge_pot.dat``.
 
@@ -180,7 +180,7 @@ For example, we can write the following lines in GWinput:
  0d0 0d0 0.05d0
 </QforEPS>
 ````
-Then we can use these 11 points to extrapolate dielectric constant at q=0.
+Then we can use these 11 points to extrapolate the dielectric constant at q=0.
 Usually, we ignore the values at small q-vector at which non-linearity is obvious.
 
 ###How to output the band gap for bulk systems
