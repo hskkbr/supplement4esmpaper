@@ -7,7 +7,7 @@ Inputs are for five NaCl-type ionic crystals LiF, MgO, NaCl, KF, and CaO.
 We use nine-layer slabs for GGA and QSGW calculations.
 
 
-##Dielectric constant from the results of ESM calculation
+#Dielectric constant from the results of ESM calculation
 
 Here we explain how to calculate dielectric constants in slab model.
 
