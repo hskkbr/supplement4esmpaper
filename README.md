@@ -15,28 +15,31 @@ to calculates the results shown in Table1 of the main text.
 
 Here we go down int the ``LiF-ESM/qsgw``.
 We firstly find ``GWinput`` and ``ctrl.lif``.
-These two are essential input files of ecalj (for GGA and QSGW).
+Although these two are essential for performing calculations in ecalj (both for GGA and QSGW),
+here we skip these two files,
+noticing just only that ``ctrl.lif`` here is the case for 9-layers of slab(see the line 40-57).
 
-The final output is already included in 0.0 and 0.2, 
-where the numbers indicates the bias voltage in Rydberg unit of
-external electric fields (see the main text).
-The files ``charge_pot.dat`` in each directory store
+
+The outputs we need here are ``0.0/charge_pot.dat`` and ``0.2/charge_pot.dat``.
+These two are final results of the QSGW+ESM calculation for LiF slab.
+Numbers 0.0 and 0.2 indicate the bias voltage of
+external electric fields in Rydberg unit (see the main text).
+These two contain
 the electrostatic potential expressed in the top panel of Fig. 1 of the main text.
 To extract data for fitting expressed in the bottom panel, 
-we should type the following on the terminal.
+let us type the following on the terminal.
 ````
 python chp.py && gnuplot fit.gnu
 ````
-If we succeeded, we will see following lines:
-
+If we succeeded, we will see following lines at the bottom of the console:
 ````
-E=  0.00241103317365848
-E0=  0.00468083482024795
-E/E0=  1.94142281880979
+slope in slab region   = 0.00241103317365848
+slope in vacuum region = 0.00468083482024795
+dielectric constant    = 1.94142281880979
 ````
-where E and E0 are the slopes of the voltage in medium(slab) and vacuum region.
+The dielectric constant 1.94 is the same results for the slab calculation in QSGW shown in Table I of the main text.
 Please check ``fit.eps`` and if the two fitting results are rational (compare with Fig. 1 of the main text).
-E/E0 is the same results as the 1.94 for the slab calculation in QSGW shown in Table I of the main text.
+
 
 ###How to re-perform the first-principles calculations
 

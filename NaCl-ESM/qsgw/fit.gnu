@@ -14,6 +14,6 @@ set label 2 at -30,0.25 sprintf("{{/Symbol e}_0(tangent)=%10.3e}", c)
 set label 3 at -30,0.20 sprintf("{{/Symbol e}/{/Symbol e}_0=%10.3e}", c/a)
 replot
 
-print "E=  ",a
-print "E0=  ",c
-print "E/E0=  ",c/a
+print "slope in slab region   = ",a
+print "slope in vacuum region = ",c
+print "dielectric constant    = ",c/a
