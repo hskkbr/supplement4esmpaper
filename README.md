@@ -154,7 +154,7 @@ At first, we perform self-consistent calculations in GGA(LDA) and/or QSGW.
 Then we can perform 
 ````
 $EXEPATH/eps_lmfh -np 36  lif  > leps_lmfh
-```
+````
 in the same manner with slab calculations.
 
 Note that we can change the number of q-points(n1n2n3) in GWinput 
