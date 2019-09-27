@@ -40,7 +40,7 @@ slope in slab region   = 0.00241103317365848
 slope in vacuum region = 0.00468083482024795
 dielectric constant    = 1.94142281880979
 ````
-The dielectric constant 1.94 is the same results for the slab calculation in QSGW shown in Table I of the main text.
+The dielectric constant 1.94 is the same result for the slab calculation in QSGW shown in Table I.
 Please check ``fit.eps`` and if the two fitting results are rational (compare with Fig. 1 of the main text).
 
 
@@ -64,7 +64,7 @@ After that, we can perform slab calculation in GGA(LDA) level.
 For example, we can type as followings for initialization and main calculations,
 ````
 $EXEPATH/lmfa  lif  >llmfa
-mpirun -n 36 $EXEPATH/lmf-MPIK  lif  >llmf
+mpirun -np 36 $EXEPATH/lmf-MPIK  lif  >llmf
 ````
 , where the $EXEPATH indicates ``bin`` directory generated in the installation of ecalj
 and 36 is the number of MPI cores.
@@ -74,7 +74,7 @@ Optionally, we may calculate and save the density of states (DOS) in GGA(LDA) le
 ````
 $EXEPATH/job_tdos lif -np 36  >llmf_tdos
 ````
-And then it is safer to save the GGA(LDA) results in case of re-calculations.
+And then it is safer to save the all results of GGA(LDA) in case of re-calculations.
 ````
 mkdir GGA
 cp *dos* GGA
@@ -235,6 +235,7 @@ For example, we can see the following in ``LiF-bulk/qsgw80-band/bnd001.spin1``,
 as 14.53-0.00=14.53, same as the 4th column in Table 2 of the main text.
 The all values in Table 2 are direct gap at q=(0,0,0) except in the case of CaO.
 
+The QSGW80 is performed by changing the parameter ``ssig`` in ctrl files (for more details, see ecaljmanual).
  
  Note that the files ``bnd00*.spin1`` are obtained by performing the self-consistent 
  calculations and 
