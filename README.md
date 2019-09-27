@@ -188,10 +188,60 @@ For example, we can write the following lines in GWinput:
 Then we can use these 11 points to extrapolate the dielectric constant at q=0.
 Usually, we ignore the values at small q-vector at which non-linearity is obvious.
 
-How to output the band gap for bulk systems
+How to estimate the band gap from output files
 ---------------------------------
 
-Finally,
-let us explain how to calculate the band gaps (for bulk systems, see *-band directory).
+Let us explain how to calculate the band gaps shown in Table 2
+ (for bulk systems, see *-band directory).
+ 
+ The directories ``gga-band``, ``qsgw-band``, ``qsgw80-band``, and ``qsgw80nsc-band``
+ are for the GGA, QSGW, QSGW80 with local-field correction
+ and QSGW80 without correction, respectively (for QSGW80, see the main text). 
+ 
+ For example, go down to the ``LiF-bulk/qsgw80-band`` directory.
+ Firstly, type 
+ ````
+ gnuplot bandplot.isp1.glt 
+ ````
+ then we can see the band structure along symmetric lines.
+ 
+To obtain the explicit values of band gap, please open the file ``bnd001.spin1``.
+ The energy eigenvalues are written 
+ in the third column in eV unit.
+By finding the lowest unoccupied state (larger than 0.000)
+and the highest occupied state (smaller than 0.000),
+we can obtain the value of the band gap.
+For example, we can see the following in ``LiF-bulk/qsgw80-band/bnd001.spin1``,
+```` 
+ 80|    5   0.86602540    -0.0000000663     0.0000000000   0.00000  0.00000  0.00000
+ 81|
+ 82|    6   0.00000000    16.1650617140     0.0000000000   0.50000  0.50000  0.50000
+ 83|    6   0.06185896    16.1715188710     0.0156421512   0.46429  0.46429  0.46429
+ 84|    6   0.12371791    16.1868538452     0.0201049505   0.42857  0.42857  0.42857
+ 85|    6   0.18557687    16.1995284276     0.0303383616   0.39286  0.39286  0.39286
+ 86|    6   0.24743583    16.2291202540    -0.0148518386   0.35714  0.35714  0.35714
+ 87|    6   0.30929479    16.1788373340    -0.1127713211   0.32143  0.32143  0.32143
+ 88|    6   0.37115374    16.0720109538    -0.1981411116   0.28571  0.28571  0.28571
+ 89|    6   0.43301270    15.9027936462    -0.2826858843   0.25000  0.25000  0.25000
+ 90|    6   0.49487166    15.6781822660    -0.3482546803   0.21429  0.21429  0.21429
+ 91|    6   0.55673062    15.4176166656    -0.3799594825   0.17857  0.17857  0.17857
+ 92|    6   0.61858957    15.1488351965    -0.3703099399   0.14286  0.14286  0.14286
+ 93|    6   0.68044853    14.9017130219    -0.3198944720   0.10714  0.10714  0.10714
+ 94|    6   0.74230749    14.7031687265    -0.2348073666   0.07143  0.07143  0.07143
+ 95|    6   0.80416645    14.5745871122    -0.1242412497   0.03571  0.03571  0.03571
+ 96|    6   0.86602540    14.5300798987     0.0000000000   0.00000  0.00000  0.00000
+````
+, thus we can obtain the value as the  direct gap at q=(0,0,0)
+as 14.53-0.00=14.53, same as the 4th column in Table 2 of the main text.
+The all values in Table 2 are direct gap at q=(0,0,0) except in the case of CaO.
+
+ 
+ Note that the files ``bnd00*.spin1`` are obtained by performing the self-consistent 
+ calculations and 
+ ````
+ job_band lif -np 4 > ljob
+ ````
+, which requires syml.* files (for more informations about ``job_band``, see ecaljmanual). 
+ 
 
 
