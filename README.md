@@ -44,7 +44,8 @@ The dielectric constant 1.94 is the same results for the slab calculation in QSG
 Please check ``fit.eps`` and if the two fitting results are rational (compare with Fig. 1 of the main text).
 
 
-#How to perform the slab calculation for obtaining charge_pot.dat
+How to perform the slab calculation for obtaining charge_pot.dat
+---------------------------------
 
 In the following, we explain how to obtain the file of ``charge_pot.dat``.
 
@@ -100,7 +101,8 @@ The difference between  ``0.0`` and ``0.2`` is in the left side of the line 4 of
 We can change the bias voltage by changing the line 4.
 
 
-###How to perform bulk calculations
+How to perform bulk calculations
+---------------------------------
 
 Let us explain the bulk calculations, of which results are shown in Table 2 of the main text.
 
@@ -118,7 +120,8 @@ qsgw80nsc-band
 and *-band are for the calculation of band gaps (results are shown in Table 2 of the paper).
 gga-*, qsgw-*, qsgw80-*, qsgw80nsc-* are for the QSGW calculations and 
 
-###How to display the results of RPA calculations
+How to display the results of RPA calculations
+---------------------------------
 
 Let us explain how to perform RPA for bulk systems (in *-eps directory).
 Firstly, go down to ``LiF-bulk/qsgw-eps``.
@@ -148,7 +151,8 @@ of the fitting line of q-epsilon curve.
 We can specify the finite q-vectors in the GWinput as explained later.
 
 
-###How to perform RPA calculation for bulk systems
+How to perform RPA calculation for bulk systems
+---------------------------------
 
 Let us explain how to obtain the EPS00*.dat files.
 At first, we perform self-consistent calculations in GGA(LDA) and/or QSGW.
@@ -184,7 +188,8 @@ For example, we can write the following lines in GWinput:
 Then we can use these 11 points to extrapolate the dielectric constant at q=0.
 Usually, we ignore the values at small q-vector at which non-linearity is obvious.
 
-###How to output the band gap for bulk systems
+How to output the band gap for bulk systems
+---------------------------------
 
 Finally,
 let us explain how to calculate the band gaps (for bulk systems, see *-band directory).
