@@ -1,7 +1,7 @@
 # Calculation details of ``A finite electric-field approach to evaluate the vertex correction for the screened Coulomb interaction in the quasiparticle self-consistent GW method'' #
 
 Above files contain the minimum inputs of ecalj for the calculation
-shown in the main text of the paper 
+shown in the paper 
 ``A finite electric-field approach to evaluate the vertex correction for the screened Coulomb interaction in the quasiparticle self-consistent GW method''.
 Inputs are for five NaCl-type ionic crystals LiF, MgO, NaCl, KF, and CaO.
 We use nine-layer slabs for GGA and QSGW calculations.
