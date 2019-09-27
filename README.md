@@ -17,7 +17,7 @@ We find ``LiF-ESM/gga`` and ``LiF-ESM/qsgw``.
 These contains the input files 
 to calculates the results shown in Table1 of the main text.
 
-Here we go down int the ``LiF-ESM/qsgw``.
+Here we go down to the ``LiF-ESM/qsgw``.
 We firstly find ``GWinput`` and ``ctrl.lif``.
 Although these two are essential for performing calculations in ecalj (both for GGA and QSGW),
 here we skip these two files,
