@@ -9,7 +9,7 @@ We use nine-layer slabs for GGA and QSGW calculations.
 Convergence check of the calculations
 ---------------------------------
 
-For the convergence, see the file ``conv_esmgw.pdf`` listed on the above.
+We have shown the convergence checks in the file ``conv_esmgw.pdf`` listed on the above.
 
 
 Dielectric constant from the results of ESM calculation
